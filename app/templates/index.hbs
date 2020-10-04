@@ -1,0 +1,19 @@
+<NavBar />
+<Jumbo>
+ <h2>Welcome to Super Rentals</h2>
+ <p>We hope you find exactly what are you looking for in a place to stay</p>
+ <LinkTo @route='contact' class='button'>Contact</LinkTo>
+ <LinkTo @route='about' class="button">About</LinkTo>
+</Jumbo>
+
+
+<div class="rentals">
+ <ul class="results">
+  {{#each @model as |rental|}}
+  <li>
+   <Rental @rental={{rental}} />
+  </li>
+  {{/each}}
+ </ul>
+</div>
+
